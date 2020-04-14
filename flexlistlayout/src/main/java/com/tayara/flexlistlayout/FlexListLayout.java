@@ -4,11 +4,13 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 
+import androidx.annotation.ColorInt;
 import androidx.annotation.ColorRes;
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +47,7 @@ public class FlexListLayout extends RecyclerView {
         setItemBackground(array.getResourceId(R.styleable.FlexListLayout_item_background, -1));
         setTextSize(array.getDimension(R.styleable.FlexListLayout_item_textSize, 12f));
         setItemMargin((int) array.getDimension(R.styleable.FlexListLayout_item_margin, 8));
-        setTextColor(array.getResourceId(R.styleable.FlexListLayout_item_textColor, getResources().getColor(android.R.color.darker_gray)));
+        setTextColor(array.getColor(R.styleable.FlexListLayout_item_textColor, getResources().getColor(android.R.color.darker_gray)));
         setItemSidesPadding((int) array.getDimension(R.styleable.FlexListLayout_item_sides_padding, 16));
         setTextAndButtonSpace((int) array.getDimension(R.styleable.FlexListLayout_item_text_button_space, 4));
         array.recycle();
@@ -99,7 +101,7 @@ public class FlexListLayout extends RecyclerView {
         this.attributes.textSize = textSize;
     }
 
-    public void setTextColor(@ColorRes int textColor) {
+    public void setTextColor(@ColorInt int textColor) {
         this.attributes.textColor = textColor;
     }
 

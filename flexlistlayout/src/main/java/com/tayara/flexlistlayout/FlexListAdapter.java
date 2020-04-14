@@ -1,5 +1,6 @@
 package com.tayara.flexlistlayout;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -62,11 +63,12 @@ class FlexListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             closeButton = item.closeButton;
         }
 
+        @SuppressLint("ResourceAsColor")
         public void bind(final String text, final int position) {
             this.text.setText(text);
             this.text.setText(text);
             this.text.setTextSize(attributes.textSize);
-            this.text.setTextColor(context.getResources().getColor(attributes.textColor));
+            this.text.setTextColor(attributes.textColor);
             item.setBackgroundResource(attributes.background);
             item.setCloseButtonVisibility(attributes.enableCloseButton ? View.VISIBLE : View.GONE);
             closeButton.setImageResource(attributes.closeButtonImage);
