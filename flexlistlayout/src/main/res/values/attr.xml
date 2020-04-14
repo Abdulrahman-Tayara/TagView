@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlexListLayout">
+        <attr name="close_button_enable" format="boolean"/>
+        <attr name="close_button_image" format="reference"/>
+        <attr name="item_background" format="reference"/>
+        <attr name="item_textColor" format="reference"/>
+        <attr name="item_textSize" format="dimension"/>
+        <attr name="item_margin" format="dimension"/>
+        <attr name="item_sides_padding" format="dimension"/>
+        <attr name="item_text_button_space" format="dimension"/>
+    </declare-styleable>
+</resources>
