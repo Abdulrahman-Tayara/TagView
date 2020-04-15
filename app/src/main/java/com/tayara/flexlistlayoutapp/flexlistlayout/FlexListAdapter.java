@@ -1,4 +1,4 @@
-package com.tayara.flexlistlayout;
+package com.tayara.flexlistlayoutapp.flexlistlayout;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

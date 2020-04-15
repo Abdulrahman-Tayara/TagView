@@ -1,4 +1,4 @@
-package com.tayara.flexlistlayout;
+package com.tayara.flexlistlayoutapp.flexlistlayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +10,8 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.tayara.flexlistlayoutapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +46,7 @@ public class FlexListLayout extends RecyclerView {
         TypedArray array = getContext().obtainStyledAttributes(attributeSet, R.styleable.FlexListLayout, 0, 0);
         setEnableCloseButton(array.getBoolean(R.styleable.FlexListLayout_close_button_enable, false));
         setCloseButtonImage(array.getResourceId(R.styleable.FlexListLayout_close_button_image, -1));
-        setItemBackground(array.getResourceId(R.styleable.FlexListLayout_item_background, -1));
+        setItemBackground(array.getResourceId(R.styleable.FlexListLayout_item_background, R.color.colorAccent));
         setTextSize(array.getDimension(R.styleable.FlexListLayout_item_textSize, 12f));
         setItemMargin((int) array.getDimension(R.styleable.FlexListLayout_item_margin, 8));
         setTextColor(array.getColor(R.styleable.FlexListLayout_item_textColor, getResources().getColor(android.R.color.darker_gray)));
