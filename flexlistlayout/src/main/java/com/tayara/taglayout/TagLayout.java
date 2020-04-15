@@ -1,4 +1,4 @@
-package com.tayara.flexlistlayout;
+package com.tayara.taglayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,58 +14,58 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FlexListLayout extends RecyclerView {
+public class TagLayout extends RecyclerView {
 
-    private List<FlexModel> models = new ArrayList<>();
+    private List<TagModel> models = new ArrayList<>();
 
-    private FlexAttributes attributes = new FlexAttributes();
+    private TagAttributes attributes = new TagAttributes();
 
-    private FlexListAdapter adapter;
+    private TagListAdapter adapter;
 
-    private OnFlexItemClickListener onFlexItemClickListener;
+    private OnTagClickListener onTagClickListener;
     private OnCloseButtonClickListener onCloseButtonClickListener;
 
-    public FlexListLayout(@NonNull Context context) {
+    public TagLayout(@NonNull Context context) {
         super(context);
         init(null);
     }
 
-    public FlexListLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public TagLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(attrs);
     }
 
-    public FlexListLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public TagLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(attrs);
     }
 
     private void parseAttributes(AttributeSet attributeSet) {
-        TypedArray array = getContext().obtainStyledAttributes(attributeSet, R.styleable.FlexListLayout, 0, 0);
-        setEnableCloseButton(array.getBoolean(R.styleable.FlexListLayout_close_button_enable, false));
-        setCloseButtonImage(array.getResourceId(R.styleable.FlexListLayout_close_button_image, -1));
-        setItemBackground(array.getResourceId(R.styleable.FlexListLayout_item_background, android.R.color.holo_orange_light));
-        setTextSize(array.getDimension(R.styleable.FlexListLayout_item_textSize, 12f));
-        setItemMargin((int) array.getDimension(R.styleable.FlexListLayout_item_margin, 8));
-        setTextColor(array.getColor(R.styleable.FlexListLayout_item_textColor, getResources().getColor(android.R.color.white)));
-        setItemLeftPadding((int) array.getDimension(R.styleable.FlexListLayout_item_left_padding, 16));
-        setItemRightPadding((int) array.getDimension(R.styleable.FlexListLayout_item_right_padding, 16));
-        setItemTopPadding((int) array.getDimension(R.styleable.FlexListLayout_item_top_padding, 16));
-        setItemBottomPadding((int) array.getDimension(R.styleable.FlexListLayout_item_bottom_padding, 16));
-        setTextAndButtonSpace((int) array.getDimension(R.styleable.FlexListLayout_item_text_button_space, 4));
+        TypedArray array = getContext().obtainStyledAttributes(attributeSet, R.styleable.TagLayout, 0, 0);
+        setEnableCloseButton(array.getBoolean(R.styleable.TagLayout_tag_close_button_enable, false));
+        setCloseButtonImage(array.getResourceId(R.styleable.TagLayout_tag_close_button_image, -1));
+        setItemBackground(array.getResourceId(R.styleable.TagLayout_tag_background, android.R.color.holo_orange_light));
+        setTextSize(array.getDimension(R.styleable.TagLayout_tag_textSize, 12f));
+        setTagMargin((int) array.getDimension(R.styleable.TagLayout_tag_margin, 8));
+        setTextColor(array.getColor(R.styleable.TagLayout_tag_textColor, getResources().getColor(android.R.color.white)));
+        setTagLeftPadding((int) array.getDimension(R.styleable.TagLayout_tag_left_padding, 16));
+        setTagRightPadding((int) array.getDimension(R.styleable.TagLayout_tag_right_padding, 16));
+        setTagTopPadding((int) array.getDimension(R.styleable.TagLayout_tag_top_padding, 16));
+        setTagBottomPadding((int) array.getDimension(R.styleable.TagLayout_tag_bottom_padding, 16));
+        setTextAndButtonSpace((int) array.getDimension(R.styleable.TagLayout_tag_text_button_space, 4));
         array.recycle();
     }
 
     private void initList() {
-        setLayoutManager(new FlexListLayoutManager(getContext()));
-        addItemDecoration(new FlexItemDecoration(attributes.itemMargin));
+        setLayoutManager(new TagListLayoutManager(getContext()));
+        addItemDecoration(new TagItemDecoration(attributes.itemMargin));
         onCloseButtonClickListener = new OnCloseButtonClickListener() {
             @Override
             public void onClick(int position) {
-                removeItem(position);
+                removeTag(position);
             }
         };
-        adapter = new FlexListAdapter(getContext(), attributes, models, onFlexItemClickListener, onCloseButtonClickListener);
+        adapter = new TagListAdapter(getContext(), attributes, models, onTagClickListener, onCloseButtonClickListener);
         setAdapter(adapter);
         setOverScrollMode(OVER_SCROLL_NEVER);
     }
@@ -95,7 +95,7 @@ public class FlexListLayout extends RecyclerView {
         this.attributes.enableCloseButton = enableCloseButton;
     }
 
-    public void setItemMargin(int itemMargin) {
+    public void setTagMargin(int itemMargin) {
         this.attributes.itemMargin = itemMargin;
     }
 
@@ -108,19 +108,19 @@ public class FlexListLayout extends RecyclerView {
         this.attributes.textColor = textColor;
     }
 
-    public void setItemLeftPadding(int padding) {
+    public void setTagLeftPadding(int padding) {
         attributes.itemLeftPadding = padding;
     }
 
-    public void setItemRightPadding(int padding) {
+    public void setTagRightPadding(int padding) {
         attributes.itemRightPadding = padding;
     }
 
-    public void setItemTopPadding(int padding) {
+    public void setTagTopPadding(int padding) {
         attributes.itemTopPadding = padding;
     }
 
-    public void setItemBottomPadding(int padding) {
+    public void setTagBottomPadding(int padding) {
         attributes.itemBottomPadding = padding;
     }
 
@@ -128,31 +128,31 @@ public class FlexListLayout extends RecyclerView {
         attributes.textAndButtonSpace = space;
     }
 
-    public void setOnFlexItemClickListener(OnFlexItemClickListener onFlexItemClickListener) {
-        this.onFlexItemClickListener = onFlexItemClickListener;
+    public void setOnTagClickListener(OnTagClickListener onTagClickListener) {
+        this.onTagClickListener = onTagClickListener;
     }
 
     public void setOnCloseButtonClickListener(OnCloseButtonClickListener onCloseButtonClickListener) {
         this.onCloseButtonClickListener = onCloseButtonClickListener;
     }
 
-    public void addItem(String text) {
-        models.add(new FlexModel(text));
+    public void addTag(String text) {
+        models.add(new TagModel(text));
         adapter.notifyItemInserted(models.size() - 1);
     }
 
-    public void addItems(List<String> texts) {
+    public void addTags(List<String> texts) {
         for (String text : texts)
-            this.models.add(new FlexModel(text));
+            this.models.add(new TagModel(text));
         adapter.notifyDataSetChanged();
     }
 
-    public void clearItems() {
+    public void clearTags() {
         models.clear();
         adapter.notifyDataSetChanged();
     }
 
-    public void removeItem(int position) {
+    public void removeTag(int position) {
         models.remove(position);
         adapter.notifyItemRemoved(position);
         adapter.notifyItemRangeChanged(position, models.size());
@@ -160,7 +160,7 @@ public class FlexListLayout extends RecyclerView {
 
 
     // interfaces
-    public interface OnFlexItemClickListener {
+    public interface OnTagClickListener {
         void onClick(String text, int position);
     }
 
@@ -168,7 +168,7 @@ public class FlexListLayout extends RecyclerView {
         void onClick(int position);
     }
 
-    class FlexAttributes {
+    class TagAttributes {
         @DrawableRes
         int background = -1;
 

@@ -1,4 +1,4 @@
-package com.tayara.flexlistlayout;
+package com.tayara.taglayout;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-class FlexItem extends LinearLayout {
+class TagView extends LinearLayout {
 
     public TextView text;
     public Space space;
@@ -19,7 +19,7 @@ class FlexItem extends LinearLayout {
 
     private int margin = 4, leftPadding, rightPadding, topPadding, bottomPadding;
 
-    public FlexItem(Context context, int margin, int leftPadding, int rightPadding, int topPadding, int bottomPadding) {
+    public TagView(Context context, int margin, int leftPadding, int rightPadding, int topPadding, int bottomPadding) {
         super(context);
         this.margin = margin;
         this.leftPadding = leftPadding;
@@ -29,22 +29,22 @@ class FlexItem extends LinearLayout {
         init();
     }
 
-    public FlexItem(Context context) {
+    public TagView(Context context) {
         super(context);
         init();
     }
 
-    public FlexItem(Context context, @Nullable AttributeSet attrs) {
+    public TagView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init();
     }
 
-    public FlexItem(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public TagView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
 
-    public FlexItem(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public TagView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init();
     }

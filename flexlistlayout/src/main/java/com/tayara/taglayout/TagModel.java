@@ -1,9 +1,9 @@
-package com.tayara.flexlistlayout;
+package com.tayara.taglayout;
 
-class FlexModel {
+class TagModel {
     private String title;
 
-    public FlexModel(String title) {
+    public TagModel(String title) {
         this.title = title;
     }
 

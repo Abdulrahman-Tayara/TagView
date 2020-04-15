@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="FlexListLayout">
-        <attr name="close_button_enable" format="boolean" />
-        <attr name="close_button_image" format="reference" />
-        <attr name="item_background" format="reference" />
-        <attr name="item_textColor" format="color" />
-        <attr name="item_textSize" format="dimension" />
-        <attr name="item_margin" format="dimension" />
-        <attr name="item_text_button_space" format="dimension" />
-        <attr name="item_left_padding" format="dimension" />
-        <attr name="item_right_padding" format="dimension" />
-        <attr name="item_top_padding" format="dimension" />
-        <attr name="item_bottom_padding" format="dimension" />
+    <declare-styleable name="TagLayout">
+        <attr name="tag_close_button_enable" format="boolean" />
+        <attr name="tag_close_button_image" format="reference" />
+        <attr name="tag_background" format="reference" />
+        <attr name="tag_textColor" format="color" />
+        <attr name="tag_textSize" format="dimension" />
+        <attr name="tag_margin" format="dimension" />
+        <attr name="tag_text_button_space" format="dimension" />
+        <attr name="tag_left_padding" format="dimension" />
+        <attr name="tag_right_padding" format="dimension" />
+        <attr name="tag_top_padding" format="dimension" />
+        <attr name="tag_bottom_padding" format="dimension" />
     </declare-styleable>
 </resources>

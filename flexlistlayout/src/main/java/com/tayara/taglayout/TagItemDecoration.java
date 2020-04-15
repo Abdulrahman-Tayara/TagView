@@ -1,4 +1,4 @@
-package com.tayara.flexlistlayout;
+package com.tayara.taglayout;
 
 import android.graphics.Rect;
 import android.view.View;
@@ -6,11 +6,11 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-class FlexItemDecoration extends RecyclerView.ItemDecoration {
+class TagItemDecoration extends RecyclerView.ItemDecoration {
 
     private int margin;
 
-    public FlexItemDecoration(int margin) {
+    public TagItemDecoration(int margin) {
         this.margin = margin;
     }
 

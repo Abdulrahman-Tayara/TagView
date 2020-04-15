@@ -1,4 +1,4 @@
-package com.tayara.flexlistlayout;
+package com.tayara.taglayout;
 
 import android.content.Context;
 

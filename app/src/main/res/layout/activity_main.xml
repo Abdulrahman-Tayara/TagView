@@ -9,7 +9,7 @@
 
 
     <com.tayara.flexlistlayoutapp.flexlistlayout.FlexListLayout
-        android:id="@+id/flex_view"
+        android:id="@+id/tag_view"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:close_button_enable="true"
