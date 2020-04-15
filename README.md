@@ -19,5 +19,18 @@ allprojects {
 ```
 
 # Example
-Screenshots
+
+<b>Screenshots<b>
+
 ![Screen 1](https://github.com/Abdulrahman-Tayara/TagView-Library/blob/master/flexlistlayout/screenshots/IMG_20200415_173456.jpg)
+
+```Java
+TagLayout tagView = findViewById(R.id.tag_view);
+tagView.addTag("Sunday");
+tagView.addTag("Monday");
+tagView.addTag("Tuesday");
+tagView.addTag("Wednesday");
+tagView.addTag("Thursday");
+tagView.addTag("Friday");
+tagView.addTag("Saturday");
+```
