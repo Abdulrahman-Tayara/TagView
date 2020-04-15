@@ -1,4 +1,4 @@
-# TagView-Library
+# Android TagView-Library
 Simple library to representing data like tags
 
 # Gradle dependency 
