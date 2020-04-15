@@ -20,9 +20,10 @@ allprojects {
 
 # Example
 
-<b>Screenshots<b>
+<b>Screenshot<b>
 
 ![Screen 1](https://github.com/Abdulrahman-Tayara/TagView-Library/blob/master/flexlistlayout/screenshots/IMG_20200415_173456.jpg)
+
 In XML
 ```xml
 <com.tayara.taglayout.TagLayout
