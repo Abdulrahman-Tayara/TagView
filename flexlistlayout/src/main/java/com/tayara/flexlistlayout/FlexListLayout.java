@@ -44,10 +44,10 @@ public class FlexListLayout extends RecyclerView {
         TypedArray array = getContext().obtainStyledAttributes(attributeSet, R.styleable.FlexListLayout, 0, 0);
         setEnableCloseButton(array.getBoolean(R.styleable.FlexListLayout_close_button_enable, false));
         setCloseButtonImage(array.getResourceId(R.styleable.FlexListLayout_close_button_image, -1));
-        setItemBackground(array.getResourceId(R.styleable.FlexListLayout_item_background, -1));
+        setItemBackground(array.getResourceId(R.styleable.FlexListLayout_item_background, android.R.color.holo_orange_light));
         setTextSize(array.getDimension(R.styleable.FlexListLayout_item_textSize, 12f));
         setItemMargin((int) array.getDimension(R.styleable.FlexListLayout_item_margin, 8));
-        setTextColor(array.getColor(R.styleable.FlexListLayout_item_textColor, getResources().getColor(android.R.color.darker_gray)));
+        setTextColor(array.getColor(R.styleable.FlexListLayout_item_textColor, getResources().getColor(android.R.color.white)));
         setItemLeftPadding((int) array.getDimension(R.styleable.FlexListLayout_item_left_padding, 16));
         setItemRightPadding((int) array.getDimension(R.styleable.FlexListLayout_item_right_padding, 16));
         setItemTopPadding((int) array.getDimension(R.styleable.FlexListLayout_item_top_padding, 16));
