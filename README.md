@@ -1,5 +1,5 @@
 # Android TagView-Library
-Simple library to representing data like tags
+Simple library to represent data like tags
 
 # Gradle dependency 
 Add this dependency in your module's build.gradle file:
