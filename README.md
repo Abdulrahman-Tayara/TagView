@@ -1,7 +1,7 @@
 # TagView-Library
 Simple library to representing data like tags
 
-## Gradle dependency 
+# Gradle dependency 
 Add this dependency in your module's build.gradle file:
 ```
 dependencies {
@@ -17,3 +17,7 @@ allprojects {
     }
 }
 ```
+
+# Example
+Screenshots
+![Screen 1](https://github.com/Abdulrahman-Tayara/TagView-Library/blob/master/flexlistlayout/screenshots/IMG_20200415_173456.jpg)
