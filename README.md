@@ -5,7 +5,7 @@ Simple library to representing data like tags
 Add this dependency in your module's build.gradle file:
 ```
 dependencies {
-    implementation 'com.github.Abdulrahman-Tayara:TagView-Library:v1.0'
+    implementation 'com.github.Abdulrahman-Tayara:TagView:v1.0'
 }
 ```
 Add repository to your app's build.gradle file :
